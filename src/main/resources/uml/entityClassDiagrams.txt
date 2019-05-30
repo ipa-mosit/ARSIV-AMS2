@@ -1,0 +1,26 @@
+@startuml
+class File{
+-String name
+-int europaid
+-String notes
+-Set<Locations>locations
+- int hashCode()
++String toString()
+}
+class Location{
+-String locId
+-kabinNo
+-unit
+-shelf
+-Set<File>files
+-void idGenerate()
+- int hashCode()
++String toString()
+}
+File "1..*"-"1..*" Location
+(File,Location) .. File_Location
+class File_Location{
+file_name
+location_locId
+}
+@enduml
