@@ -1,26 +1,29 @@
 @startuml
+class Cabinet{
+    int no
+    HalfCabinet A
+    HalfCabinet B
+}
+Cabinet "1" *-- "2" HalfCabinet:contains
+class HalfCabinet{
+    Set<Location>();
+}
+HalfCabinet "1" *-- "15" Location:contains
+class Location{
+-id
+-unit
+-shelf
+}
 class File{
+-id
 -String name
 -int europaid
 -String notes
--Set<Locations>locations
-- int hashCode()
-+String toString()
-}
-class Location{
--String locId
--kabinNo
--unit
--shelf
--Set<File>files
--void idGenerate()
-- int hashCode()
-+String toString()
 }
 File "1..*"-"1..*" Location
 (File,Location) .. File_Location
 class File_Location{
-file_name
-location_locId
+file_id
+location_id
 }
 @enduml
