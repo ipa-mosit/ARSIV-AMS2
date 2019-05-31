@@ -22,7 +22,6 @@
         <property name="hibernate.hikari.minimumIdle">10</property>
         <property name="hibernate.hikari.maximumPoolSize">20</property>
         <property name="hibernate.hikari.idleTimeout">300000</property>
-
         <property name="hibernate.hikari.dataSource.cachePrepStmts">true</property>
         <property name="hibernate.hikari.dataSource.prepStmtCacheSize">250</property>
         <property name="hibernate.hikari.dataSource.prepStmtCacheSqlLimit">2048</property>
@@ -30,14 +29,13 @@
         <property name="hibernate.current_session_context_class">thread</property>
         <!-- <property name="hibernate.hbm2dll.auto">create-drop</property> -->
         <property name="hibernate.hbm2ddl.auto">update</property>
-        
         <!-- <mapping class="modeller.Person"/> -->
         <!-- <mapping class="modeller.Skill"/> -->
         <!-- <mapping class="modeller.Ranking"/> -->
-        <mapping class="modeller.File"/>
+        <mapping class="dataAccessLayer.entities.File"/>
         <!-- <mapping class="modeller.Cabinet"/> -->
-        <!-- <mapping class="modeller.HalfCabinet"/> -->
-        <mapping class="modeller.Location"/>
+        <mapping class="dataAccessLayer.entities.HalfCabinet"/>
+        <mapping class="dataAccessLayer.entities.Location"/>
 
 
         <!-- <property name="connection.driver_class">org.postgresql.Driver</property> -->

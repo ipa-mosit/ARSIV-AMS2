@@ -13,9 +13,9 @@
 <url>http://maven.apache.org</url>
 
 <properties>
-    <!-- <main.class>ana.ArsivMain</main.class> -->
+    <main.class>ana.ArsivMain</main.class>
         <!-- <main.class>ana.Ui</main.class> -->
-        <main.class>ana.UserDataCollector</main.class>
+        <!-- <main.class>ana.UserDataCollector</main.class> -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     </properties>

@@ -1,29 +1,29 @@
 @startuml
-class Cabinet{
-    int no
-    HalfCabinet A
-    HalfCabinet B
-}
-Cabinet "1" *-- "2" HalfCabinet:contains
+package dataAccessLayer.entities{
 class HalfCabinet{
-    Set<Location>();
+    -int kabin_no;
+    -char kabinKisim;
+    -Set<Location>locations();
 }
 HalfCabinet "1" *-- "15" Location:contains
 class Location{
 -id
 -unit
 -shelf
+-Set<File>files();
 }
 class File{
 -id
 -String name
 -int europaid
 -String notes
+-Set<Location>locations();
 }
 File "1..*"-"1..*" Location
 (File,Location) .. File_Location
 class File_Location{
-file_id
-location_id
+-file_id
+-location_id
+}
 }
 @enduml
