@@ -10,9 +10,9 @@
 <!--DataSource ile Bağlayak bakalım-->
         <property name="hibernate.connection.provider_class">org.hibernate.hikaricp.internal.HikariCPConnectionProvider</property>
 <!-- Ana Server üzerindeki database -->
-        <property name="hibernate.hikari.jdbcUrl">jdbc:postgresql://192.168.43.23:5444/arsivtest?useSSL=false</property>
-        <property name="hibernate.hikari.dataSource.user">arsivtest</property>
-        <property name="hibernate.hikari.dataSource.password">arsivtest</property>
+        <!-- <property name="hibernate.hikari.jdbcUrl">jdbc:postgresql://192.168.43.23:5444/arsivtest?useSSL=false</property> -->
+        <!-- <property name="hibernate.hikari.dataSource.user">arsivtest</property> -->
+        <!-- <property name="hibernate.hikari.dataSource.password">arsivtest</property> -->
 <!-- Local Database -->
         <property name="hibernate.hikari.jdbcUrl">jdbc:postgresql://localhost:5432/arsiv?useSSL=false</property>
         <property name="hibernate.hikari.dataSource.user">osman</property>

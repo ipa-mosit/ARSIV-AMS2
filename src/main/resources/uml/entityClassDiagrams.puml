@@ -1,5 +1,6 @@
 @startuml
-package dataAccessLayer.entities{
+package dataAccessLayer{
+package entities{
 class HalfCabinet{
     -int kabin_no;
     -char kabinKisim;
@@ -25,5 +26,19 @@ class File_Location{
 -file_id
 -location_id
 }
+}
+class Baglanti{
+public SessionFactory oturumÜreteci
+    public Session oturum;
+    public Transaction islem;
+    public void ac(){
+    public void kaydet(Object obj){
+    public void guncelle(Object obj){
+    public void kaydetVeyaGuncelle(Object obj){
+}
+}
+package ana{
+class ArsivMain{
+    public static void main (String[] args) {
 }
 @enduml
