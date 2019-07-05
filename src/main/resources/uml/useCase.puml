@@ -1,0 +1,55 @@
+@startuml
+left to right direction
+/' skinparam packageStyle rectangle '/
+actor fatmira
+actor kullanıcı
+
+/' together{ '/
+/' } '/
+note "Dosya ödünç isteme" as DOI
+note "Dosya teslimi" as DT
+kullanıcı .. DT
+DT .. fatmira
+kullanıcı .. DOI
+DOI .. fatmira
+rectangle ArsivProgramı {
+
+/' (Dosya verme/alma) '/
+/' (Dosya alma) '/
+/' (Dosya verme) '/
+(Yetki kontrolü)
+kullanıcı-->(Dosya arama)
+fatmira-->(Yetki kontrolü)
+fatmira --> (Dosya arama)
+(Yetki kontrolü)--> (Dosya kayıt)
+(Yetki kontrolü)--> (Dosya güncelleme)
+(Yetki kontrolü)--> (Dosya verme)
+(Yetki kontrolü)--> (Dosya silme)
+(Yetki kontrolü)--> (Dosya teslim)
+(Yetki kontrolü)-->(Kullanıcı kayıt)
+(Yetki kontrolü)-->(Kullanıcı sorgulama)
+(Yetki kontrolü)-->(Eksik dosya kontrolü)
+
+
+/' fatmira --> (Kullanıcı yönetim işlemleri) '/
+(Dosya teslim)--|>(Kullanıcı yönetim işlemleri):extends
+(Dosya verme)--|>(Kullanıcı yönetim işlemleri):extends
+(Kullanıcı kayıt)--|>(Kullanıcı yönetim işlemleri):extends
+(Kullanıcı sorgulama)--|>(Kullanıcı yönetim işlemleri):extends
+
+(Dosya arama)--|>(Dosya yönetim işlemleri):extends
+(Dosya kayıt)--|>(Dosya yönetim işlemleri):extends
+(Dosya güncelleme)--|>(Dosya yönetim işlemleri):extends
+(Dosya silme)--|>(Dosya yönetim işlemleri):extends
+(Eksik dosya kontrolü)--|>(Dosya yönetim işlemleri):extends
+(Dosya verme)--|>(Dosya yönetim işlemleri):extends
+(Dosya teslim)--|>(Dosya yönetim işlemleri):extends
+
+(Eksik dosya kontrolü)--|>(Kullanıcı yönetim işlemleri):extends
+/' right to left direction '/
+/' (Dosya alma)<~~(Dosya verme/alma) : içerir '/
+/' (Dosya verme)<~~(Dosya verme/alma) : içerir '/
+/' :Kullanıcı:---(DOSYA VERME/ALMA) '/
+/' :Kullanıcı:---(DOSYA ARAMA) '/
+}
+@enduml
