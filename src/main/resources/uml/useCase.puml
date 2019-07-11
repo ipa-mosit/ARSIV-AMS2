@@ -1,7 +1,8 @@
 @startuml
 left to right direction
 /' skinparam packageStyle rectangle '/
-actor fatmira
+actor "arsiv görevlisi"as argör
+/' actor argör '/
 actor kullanıcı
 
 /' together{ '/
@@ -9,9 +10,9 @@ actor kullanıcı
 note "Dosya ödünç isteme" as DOI
 note "Dosya teslimi" as DT
 kullanıcı .. DT
-DT .. fatmira
+DT .. argör
 kullanıcı .. DOI
-DOI .. fatmira
+DOI .. argör
 rectangle ArsivProgramı {
 
 /' (Dosya verme/alma) '/
@@ -19,8 +20,8 @@ rectangle ArsivProgramı {
 /' (Dosya verme) '/
 (Yetki kontrolü)
 kullanıcı-->(Dosya arama)
-fatmira-->(Yetki kontrolü)
-fatmira --> (Dosya arama)
+argör-->(Yetki kontrolü)
+argör --> (Dosya arama)
 (Yetki kontrolü)--> (Dosya kayıt)
 (Yetki kontrolü)--> (Dosya güncelleme)
 (Yetki kontrolü)--> (Dosya verme)
@@ -29,13 +30,15 @@ fatmira --> (Dosya arama)
 (Yetki kontrolü)-->(Kullanıcı kayıt)
 (Yetki kontrolü)-->(Kullanıcı sorgulama)
 (Yetki kontrolü)-->(Eksik dosya kontrolü)
+(Yetki kontrolü)-->(Dosya geçmişi sorgulama)
 
 
-/' fatmira --> (Kullanıcı yönetim işlemleri) '/
+/' argör --> (Kullanıcı yönetim işlemleri) '/
 (Dosya teslim)--|>(Kullanıcı yönetim işlemleri):extends
 (Dosya verme)--|>(Kullanıcı yönetim işlemleri):extends
 (Kullanıcı kayıt)--|>(Kullanıcı yönetim işlemleri):extends
 (Kullanıcı sorgulama)--|>(Kullanıcı yönetim işlemleri):extends
+(Dosya geçmişi sorgulama)--|>(Kullanıcı yönetim işlemleri):extends
 
 (Dosya arama)--|>(Dosya yönetim işlemleri):extends
 (Dosya kayıt)--|>(Dosya yönetim işlemleri):extends
@@ -44,6 +47,7 @@ fatmira --> (Dosya arama)
 (Eksik dosya kontrolü)--|>(Dosya yönetim işlemleri):extends
 (Dosya verme)--|>(Dosya yönetim işlemleri):extends
 (Dosya teslim)--|>(Dosya yönetim işlemleri):extends
+(Dosya geçmişi sorgulama)--|>(Dosya yönetim işlemleri):extends
 
 (Eksik dosya kontrolü)--|>(Kullanıcı yönetim işlemleri):extends
 /' right to left direction '/
