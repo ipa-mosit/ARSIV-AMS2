@@ -4,6 +4,7 @@ left to right direction
 actor "arsiv görevlisi"as argör
 /' actor argör '/
 actor kullanıcı
+actor yönetici as SU
 
 /' together{ '/
 /' } '/
@@ -18,20 +19,21 @@ rectangle ArsivProgramı {
 /' (Dosya verme/alma) '/
 /' (Dosya alma) '/
 /' (Dosya verme) '/
-(Yetki kontrolü)
+SU-->(Yetki belirleme)
+(Yetki kontrolü) as YK
 kullanıcı-->(Dosya arama)
-argör-->(Yetki kontrolü)
-argör --> (Dosya arama)
-(Yetki kontrolü)--> (Dosya kayıt)
-(Yetki kontrolü)--> (Dosya güncelleme)
-(Yetki kontrolü)--> (Dosya verme)
-(Yetki kontrolü)--> (Dosya silme)
-(Yetki kontrolü)--> (Dosya teslim)
-(Yetki kontrolü)-->(Kullanıcı kayıt)
-(Yetki kontrolü)-->(Kullanıcı sorgulama)
-(Yetki kontrolü)-->(Eksik dosya kontrolü)
-(Yetki kontrolü)-->(Dosya geçmişi sorgulama)
-
+argör-->YK
+YK --> (Dosya arama)
+YK--> (Dosya kayıt)
+YK--> (Dosya güncelleme)
+YK--> (Dosya verme)
+YK--> (Dosya silme)
+YK--> (Dosya teslim)
+YK-->(Kullanıcı kayıt)
+YK-->(Kullanıcı sorgulama)
+YK-->(Eksik dosya kontrolü)
+YK-->(Dosya geçmişi sorgulama)
+YK --> (Dosya arama)
 
 /' argör --> (Kullanıcı yönetim işlemleri) '/
 (Dosya teslim)--|>(Kullanıcı yönetim işlemleri):extends
