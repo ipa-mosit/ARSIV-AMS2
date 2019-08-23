@@ -1,0 +1,68 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/3fdf28bc/
+.fancy-border	src/main/resources/public-html/web-demo.css	/^.fancy-border {$/;"	c
+.fancy-border	target/classes/public-html/web-demo.css	/^.fancy-border {$/;"	c
+ARSIV-AMS2	README.md	/^# ARSIV-AMS2$/;"	c
+AppUtil	src/main/java/presentationLayer/shell/textio/AppUtil.java	/^public class AppUtil {$/;"	c
+ArsivMain	src/main/java/ana/ArsivMain.java	/^public class ArsivMain{$/;"	c
+Baglanti	src/main/java/dataAccessLayer/Baglanti.java	/^    public Baglanti(){$/;"	m	class:Baglanti
+Baglanti	src/main/java/dataAccessLayer/Baglanti.java	/^public class Baglanti{$/;"	c
+File	src/main/java/dataAccessLayer/entities/File.java	/^public class File{$/;"	c
+HalfCabinet	src/main/java/dataAccessLayer/entities/HalfCabinet.java	/^public class HalfCabinet{$/;"	c
+IPA Arşiv Web Arayüz Denemesi	src/main/resources/public-html/arsiv.html	/^<h1>IPA Arşiv Web Arayüz Denemesi<\/h1>$/;"	h
+IPA Arşiv Web Arayüz Denemesi	target/classes/public-html/arsiv.html	/^<h1>IPA Arşiv Web Arayüz Denemesi<\/h1>$/;"	h
+Location	src/main/java/dataAccessLayer/entities/Location.java	/^public class Location{$/;"	c
+WebTextIoExecutor	src/main/java/presentationLayer/shell/textio/WebTextIoExecutor.java	/^public class WebTextIoExecutor {$/;"	c
+WebTextTerminal Demo	src/main/resources/public-html/web-demo.html	/^<h1>WebTextTerminal Demo<\/h1>$/;"	h
+WebTextTerminal Demo	target/classes/public-html/web-demo.html	/^<h1>WebTextTerminal Demo<\/h1>$/;"	h
+ac	src/main/java/dataAccessLayer/Baglanti.java	/^    public void ac(){$/;"	m	class:Baglanti
+ana	src/main/java/ana/ArsivMain.java	/^package ana;$/;"	p
+app-done	src/main/resources/public-html/arsiv.html	/^<h3 id="app-done"> <\/h3>$/;"	I
+app-done	src/main/resources/public-html/web-demo.html	/^<h3 id="app-done"> <\/h3>$/;"	I
+app-done	target/classes/public-html/arsiv.html	/^<h3 id="app-done"> <\/h3>$/;"	I
+app-done	target/classes/public-html/web-demo.html	/^<h3 id="app-done"> <\/h3>$/;"	I
+arsiv02	pom.xml	/^<artifactId>arsiv02<\/artifactId>$/;"	a	groupId:com.stargate
+com.stargate	pom.xml	/^<groupId>com.stargate<\/groupId>$/;"	g
+dataAccessLayer	src/main/java/dataAccessLayer/Baglanti.java	/^package dataAccessLayer;$/;"	p
+dataAccessLayer.entities	src/main/java/dataAccessLayer/entities/File.java	/^package dataAccessLayer.entities;$/;"	p
+dataAccessLayer.entities	src/main/java/dataAccessLayer/entities/HalfCabinet.java	/^package dataAccessLayer.entities;$/;"	p
+dataAccessLayer.entities	src/main/java/dataAccessLayer/entities/Location.java	/^package dataAccessLayer.entities;$/;"	p
+europaid	src/main/java/dataAccessLayer/entities/File.java	/^    int europaid;$/;"	f	class:File
+execute	src/main/java/presentationLayer/shell/textio/WebTextIoExecutor.java	/^    public void execute(TextIoApp<?> app) {$/;"	m	class:WebTextIoExecutor
+gonder	src/main/java/dataAccessLayer/Baglanti.java	/^    public void gonder(){$/;"	m	class:Baglanti
+guncelle	src/main/java/dataAccessLayer/Baglanti.java	/^    public void guncelle(Object obj){$/;"	m	class:Baglanti
+halfCabinet	src/main/java/dataAccessLayer/entities/Location.java	/^    HalfCabinet halfCabinet;$/;"	f	class:Location
+id	src/main/java/dataAccessLayer/entities/HalfCabinet.java	/^    int id;$/;"	f	class:HalfCabinet
+id	src/main/java/dataAccessLayer/entities/Location.java	/^    int id;$/;"	f	class:Location
+interfaceLayer.shell.textio	src/main/java/presentationLayer/shell/textio/AppUtil.java	/^package interfaceLayer.shell.textio;$/;"	p
+interfaceLayer.shell.textio	src/main/java/presentationLayer/shell/textio/WebTextIoExecutor.java	/^package interfaceLayer.shell.textio;$/;"	p
+islem	src/main/java/dataAccessLayer/Baglanti.java	/^    public Transaction islem;$/;"	f	class:Baglanti
+kabinKisim	src/main/java/dataAccessLayer/entities/HalfCabinet.java	/^    char kabinKisim;$/;"	f	class:HalfCabinet
+kabinNo	src/main/java/dataAccessLayer/entities/HalfCabinet.java	/^    int kabinNo;$/;"	f	class:HalfCabinet
+kapat	src/main/java/dataAccessLayer/Baglanti.java	/^    public void kapat(){$/;"	m	class:Baglanti
+kaydet	src/main/java/dataAccessLayer/Baglanti.java	/^    public void kaydet(Object obj){$/;"	m	class:Baglanti
+kaydetVeyaGuncelle	src/main/java/dataAccessLayer/Baglanti.java	/^    public void kaydetVeyaGuncelle(Object obj){$/;"	m	class:Baglanti
+kompleKapat	src/main/java/dataAccessLayer/Baglanti.java	/^    public void kompleKapat(){$/;"	m	class:Baglanti
+locations	src/main/java/dataAccessLayer/entities/File.java	/^    Set<Location>locations=new HashSet();$/;"	f	class:File
+locations	src/main/java/dataAccessLayer/entities/HalfCabinet.java	/^    Set<Location> locations = new HashSet<Location>();$/;"	f	class:HalfCabinet
+main	src/main/java/ana/ArsivMain.java	/^    public static void main (String[] args) {$/;"	m	class:ArsivMain
+main.class	pom.xml	/^    <main.class>ana.ArsivMain<\/main.class>$/;"	p
+name	src/main/java/dataAccessLayer/entities/File.java	/^    String name;$/;"	f	class:File
+notes	src/main/java/dataAccessLayer/entities/File.java	/^    String notes;$/;"	f	class:File
+oturum	src/main/java/dataAccessLayer/Baglanti.java	/^    public Session oturum;$/;"	f	class:Baglanti
+oturumUretici	src/main/java/dataAccessLayer/Baglanti.java	/^    public SessionFactory oturumUretici;$/;"	f	class:Baglanti
+port	src/main/java/presentationLayer/shell/textio/WebTextIoExecutor.java	/^    private Integer port;$/;"	f	class:WebTextIoExecutor	file:
+printGsonMessage	src/main/java/presentationLayer/shell/textio/AppUtil.java	/^    public static void printGsonMessage(TextTerminal<?> terminal, String initData) {$/;"	m	class:AppUtil
+project.build.sourceEncoding	pom.xml	/^        <project.build.sourceEncoding>UTF-8<\/project.build.sourceEncoding>$/;"	p
+shelf	src/main/java/dataAccessLayer/entities/Location.java	/^    int shelf;$/;"	f	class:Location
+textterm	src/main/resources/public-html/arsiv.html	/^<div id="textterm" class="textterm-pane">$/;"	I
+textterm	src/main/resources/public-html/web-demo.html	/^<div id="textterm" class="textterm-pane">$/;"	I
+textterm	target/classes/public-html/arsiv.html	/^<div id="textterm" class="textterm-pane">$/;"	I
+textterm	target/classes/public-html/web-demo.html	/^<div id="textterm" class="textterm-pane">$/;"	I
+unit	src/main/java/dataAccessLayer/entities/Location.java	/^    int unit;$/;"	f	class:Location
+withPort	src/main/java/presentationLayer/shell/textio/WebTextIoExecutor.java	/^    public WebTextIoExecutor withPort(int port) {$/;"	m	class:WebTextIoExecutor
