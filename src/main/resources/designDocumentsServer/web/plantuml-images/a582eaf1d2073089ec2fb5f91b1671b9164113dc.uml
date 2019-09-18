@@ -1,4 +1,0 @@
-@startuml
-alice -> bob
-
-@enduml

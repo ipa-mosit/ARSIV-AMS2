@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Documentation Server</title>
+  <title>deneme2.usencom</title>
   <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -19,22 +19,26 @@
 <body>
 <div class="title">
 <h1 id="kullanım-senaryosu">Kullanım Senaryosu:</h1>
-<p>Deneme</p>
 </div>
 <div style="padding:10px;margin:10px">
-<p><img src="plantuml-images/ce79e77623a22ca1269a9d1c78808a1f55e2a38e.png" /></p>
+<pre class="plantuml"><code>actor User
+User -&gt; (Giriş/Yetki Kontrolü)</code></pre>
 <h3 id="şekil-1-kullanım-senaryosu-diagramı">Şekil 1: Kullanım Senaryosu Diagramı</h3>
 </div>
 <div style="padding:10px;margin:10px">
-<p><strong>Özet:</strong>Deneme</p>
-<p><strong>Fail:</strong>Arşiv Görevlisi</p>
-<p><strong>Ön Şart:</strong>Deneme</p>
-<p><strong>Ana Silsile:</strong> Deneme</p>
-<p><strong>Alternatif Silsile:</strong>Deneme</p>
-<p><strong>Beklenen Sonuç:</strong>Giriş</p>
+<p><strong>Özet:</strong></p>
+<p><strong>Fail:</strong></p>
+<p><strong>Ön Şart:</strong></p>
+<p><strong>Ana Silsile:</strong></p>
+<p><strong>Alternatif Silsile:</strong></p>
+<p><strong>Beklenen Sonuç:</strong></p>
 </div>
 <div style="padding:10px;margin:10px">
-<p><img src="plantuml-images/19a228e219eb6b99fbdc91c8befc23a5574577c6.png" /></p>
+<pre class="plantuml"><code>allow_mixing
+actor User 
+object deneme &lt;&lt;user interface&gt;&gt; {
+}
+User - deneme : M1-&gt;</code></pre>
 <h3 id="şekil-2-iletişim-diagramı">Şekil 2: İletişim Diagramı</h3>
 </div>
 </body>

@@ -4,25 +4,31 @@ import re
 import subprocess
 import http.server
 import socketserver
+import dosya
 
-# os.system("source ../../../../venv/bin/activate")
-# os.system("ls")
 os.chdir("markdowns")
+htmlIncludes=[]
+
+#Dosyaları Ayarlayalım
 files=glob.glob("*.md")
-os.chdir("../web")
-i=0
-print(os.path.dirname("/home/osman/.vim/templates"))
-dirname=os.path.join("/home/osman/.vim/templates","ertan")
-print(dirname)
-while i<len(files):
-    fileName=files[i].split(".")[0]+".html"
-    print(fileName)
-    print(os.getcwd())
-    os.system('pandoc -t html5 --css ../bulma.css ../markdowns/%s -s -o %s --metadata pagetitle="Documentation Server" --filter pandoc-plantuml' % (files[i],fileName))
-    i+=1
+for file in files:
+    if os.getcwd().split("/")[-1]!="markdowns":
+        os.chdir("../markdowns")
+    fileFirstName=file.split(".")[0]
+    htmlFileName=fileFirstName+".html"
+    htmlInclude="<li><a href="+htmlFileName+">"+fileFirstName+"</a></li>\n"
+    htmlIncludes.append(htmlInclude+"\n")
+    os.chdir("../web")
+    os.system('pandoc -t html5 --css bulma.css ../markdowns/%s -s -o %s --metadata pagetitle="Documentation Server" --filter pandoc-plantuml' % (file,htmlFileName))
+
+# index.htmle dosyaları yazalım    
+basla='<ul class="otomatik">'
+bitir='</ul>'
+sayfa="index.html"
+dosya.degistir(basla,bitir,sayfa,htmlIncludes)
+
 # Server yapılandırması
 PORT = 8000
-
 Handler = http.server.SimpleHTTPRequestHandler
 httpd = socketserver.TCPServer(("", PORT), Handler)
 print("serving at port", PORT)
