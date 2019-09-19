@@ -1,0 +1,61 @@
+@startuml
+left to right direction
+/' skinparam packageStyle rectangle '/
+actor "arsiv görevlisi"as argör
+/' actor argör '/
+actor kullanıcı
+actor yönetici as SU
+
+/' together{ '/
+/' } '/
+note "Dosya ödünç isteme" as DOI
+note "Dosya teslimi" as DT
+kullanıcı .. DT
+DT .. argör
+kullanıcı .. DOI
+DOI .. argör
+rectangle ArsivProgramı {
+
+/' (Dosya verme/alma) '/
+/' (Dosya alma) '/
+/' (Dosya verme) '/
+SU-->(Yetki belirleme)
+(Yetki kontrolü) as YK
+kullanıcı-->(Dosya arama)
+argör-->YK
+YK --> (Dosya arama)
+YK--> (Dosya kayıt)
+YK--> (Dosya güncelleme)
+YK--> (Dosya verme)
+YK--> (Dosya silme)
+YK--> (Dosya teslim)
+YK-->(Kullanıcı kayıt)
+YK-->(Kullanıcı sorgulama)
+YK-->(Eksik dosya kontrolü)
+YK-->(Dosya geçmişi sorgulama)
+YK --> (Dosya arama)
+
+/' argör --> (Kullanıcı yönetim işlemleri) '/
+(Dosya teslim)--|>(Kullanıcı yönetim işlemleri):extends
+(Dosya verme)--|>(Kullanıcı yönetim işlemleri):extends
+(Kullanıcı kayıt)--|>(Kullanıcı yönetim işlemleri):extends
+(Kullanıcı sorgulama)--|>(Kullanıcı yönetim işlemleri):extends
+(Dosya geçmişi sorgulama)--|>(Kullanıcı yönetim işlemleri):extends
+
+(Dosya arama)--|>(Dosya yönetim işlemleri):extends
+(Dosya kayıt)--|>(Dosya yönetim işlemleri):extends
+(Dosya güncelleme)--|>(Dosya yönetim işlemleri):extends
+(Dosya silme)--|>(Dosya yönetim işlemleri):extends
+(Eksik dosya kontrolü)--|>(Dosya yönetim işlemleri):extends
+(Dosya verme)--|>(Dosya yönetim işlemleri):extends
+(Dosya teslim)--|>(Dosya yönetim işlemleri):extends
+(Dosya geçmişi sorgulama)--|>(Dosya yönetim işlemleri):extends
+
+(Eksik dosya kontrolü)--|>(Kullanıcı yönetim işlemleri):extends
+/' right to left direction '/
+/' (Dosya alma)<~~(Dosya verme/alma) : içerir '/
+/' (Dosya verme)<~~(Dosya verme/alma) : içerir '/
+/' :Kullanıcı:---(DOSYA VERME/ALMA) '/
+/' :Kullanıcı:---(DOSYA ARAMA) '/
+}
+@enduml

@@ -1,0 +1,62 @@
+@startuml
+package dataAccessLayer{
+package entities{
+class Location{
+-String Id
+-int KabinNo
+-char KabinKisim
+-int unit
+-int shelf
+-Set<File>files
+Location(int,char,int,int)
+-String generateId(KabinNo,KabinKisim,shelf,unit)
+}
+class File{
+-String name
+-int europaid
+-String content
+-String notes
+-Borrower borrower
+-Date borrowDate
+-Date dueDate
+-Boolean inOut
+-Set<Location>locations;
+File()
+-ioControl()
+/' ioControl fonksyonu constructor içinde çalıştırılıp field o şekilde doldurulacak '/
+}
+File "1..*"-"1..*" Location
+(File,Location) .. File_Location
+class File_Location{
+-file_name
+-location_id
+}
+
+
+class Borrower{
+    -String name
+    -String surname
+    -Set<File>files
+}
+Borrower "1..*"-"0..1" File
+(File,Borrower) .. File_Borrower
+class File_Borrower{
+    -file_name
+    -borrower_name
+}
+}
+class Baglanti{
+public SessionFactory oturumÜreteci
+    public Session oturum;
+    public Transaction islem;
+    public void ac(){
+    public void kaydet(Object obj){
+    public void guncelle(Object obj){
+    public void kaydetVeyaGuncelle(Object obj){
+}
+}
+package ana{
+class ArsivMain{
+    public static void main (String[] args) {
+}
+@enduml
