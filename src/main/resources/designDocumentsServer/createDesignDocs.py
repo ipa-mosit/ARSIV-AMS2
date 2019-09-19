@@ -9,7 +9,7 @@ import dosya
 os.chdir("markdowns")
 htmlIncludes=[]
 
-#Dosyaları Ayarlayalım
+#Dosyaları Ayarlayalım ve Htmle çevirelim
 files=glob.glob("*.md")
 for file in files:
     if os.getcwd().split("/")[-1]!="markdowns":
@@ -27,9 +27,10 @@ bitir='</ul>'
 sayfa="index.html"
 dosya.degistir(basla,bitir,sayfa,htmlIncludes)
 
-# Server yapılandırması
-PORT = 8000
-Handler = http.server.SimpleHTTPRequestHandler
-httpd = socketserver.TCPServer(("", PORT), Handler)
-print("serving at port", PORT)
-httpd.serve_forever()
+# # Server yapılandırması
+# PORT = 8080
+# Handler = http.server.SimpleHTTPRequestHandler
+# httpd = socketserver.TCPServer(("", PORT), Handler)
+# print("serving at port", PORT)
+# httpd.serve_forever()
+
